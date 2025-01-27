@@ -1,5 +1,25 @@
 ## Installation ##
 
+Create a virtual enviroment to install the packages listed in requirements.txt
+
+----------
+python3 -m venv .venv
+
+----------
+Activate the virtual enviroment using:
+
+-----------
+.venv\Scripts\activate
+
+-----------
+
+Next install all packages in the file using:
+
+------------------
+pip install -r /path/to/requirements.txt
+
+------------------
+
 Access from a powershell window into the folder you currently have the script Load_API.py
 Then just execute the file with python Load_API.py
 
