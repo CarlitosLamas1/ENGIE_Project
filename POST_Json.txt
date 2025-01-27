@@ -1,0 +1,18 @@
+$jsonString = Get-Content -Raw -Path "Path/to/your/Json/file"
+$jsonObject = ConvertFrom-Json $jsonString
+
+# Ahora $jsonObject es un objeto con propiedades: load, fuels, y powerplants
+$load = $jsonObject.load
+$fuels = $jsonObject.fuels
+$powerplants = $jsonObject.powerplants
+
+# Convertir el objeto principal a JSON para enviarlo en el body.
+$body = $jsonObject | ConvertTo-Json
+
+$headers = @{
+    "Content-Type" = "application/json"
+}
+
+$response = Invoke-RestMethod -Uri "http://127.0.0.1:8888/productionplan" -Method Post -Body $body -Headers $headers -ContentType "application/json"
+
+$response | ConvertTo-Json
