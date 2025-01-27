@@ -34,4 +34,6 @@ $response | ConvertTo-Json
 
 Another way is to change the file "POST_Json.txt" for "POST_Json.ps1" and then modifiy the following text "Path/to/your/Json/file" with the actual path to your json file
 From another powershell window execute "POST_Json.ps1" using the following command:
+
+-------------------------
 ./POST_Json.ps1
